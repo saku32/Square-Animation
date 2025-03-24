@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="square.css"> -->
+    <style>
+        .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 500px;
+   
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+img{
+    justify-content: center;
+    align-items: center;
+    
+    height: 200px;
+    width: 200px;
+    z-index:1;
+}
+h2{
+    z-index:1;
+}
+.card::before{
+height:900px;
+width: 900px;
+content: " ";
+background: conic-gradient(red, blue,green,yellow);
+position: absolute;
+animation: rotate 5s infinite;
+}
+@keyframes rotate{
+    from{
+
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+ .card::after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    inset: 10px;
+    border-radius: 10px;
+} 
+    </style>
+</head>
+<body>
+    <div class="card">
+        
+<img src="https://www.pngkit.com/png/detail/231-2318671_businesswoman-blank-profile-picture-female.png" alt="" height="200px"width="200px">
+<br>
+        <h2>Hiiii!</h2>
+    
+    
+</div>
+</body>
+</html>
